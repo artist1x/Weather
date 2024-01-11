@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    
+    <title>Login System</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand" href="#">
+                <img class="logo d-inline-block " src="assets/imgs/logo.png" alt="">
+                <h3 class="d-inline-block align-middle">Weather</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav  mb-2 mb-lg-0 align-items-baseline">
+                    <li class="nav-item">
+                        <a class="nav-link ps-5" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ps-5"" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ps-5"" href="#">Live Cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ps-5"" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ps-5"" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="vh-100 d-flex justify-content-center align-items-center">
+
+        
+        <div class="container">
+            <div class="row display-info mb-md-5 mb-sm-2 text-center m-auto ">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p class="fs-4 location m-0 p-0"> </p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="fs-4  m-0 p-0" id="timeOn"> </p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="fs-4 m-0 p-0" id="location-info"> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6  pb-md-5">
+                    <h1 class="mb-md-5 hero-title">Weather forecasts for thousands of locations around the world</h1>
+                    <input class="" id="Search" placeholder="Search for a place..|" type="text">
+                </div>
+                <div class="col-1 "></div>
+                <div class="col-md-5">
+                    <div class="display-weather">
+                        <div class="card  text-center ">
+                            <div class="data-info p-md-5 p-sm-3 ">
+                                <div class="day pt-3 text-center">
+                                    <p class="fs-3" id="dayName">Sunday</p>
+                                </div>
+                                <div class="date-weather d-flex py-md-4 py-4 justify-content-between row">
+                                    <div class="col-4 pb-1">
+                                        <p class="fs-4 location"></p>
+                                    </div>
+                                    <div class="col-5 pb-1 text-center">
+                                        <p class=" fs-2 fw-bold ">
+                                        <span class=" fs-2 fw-bold" id="degree"></span>°C</p>
+                                    </div>
+                                    <div class="col-3 pb-1">
+                                        <img src="assets/imgs/icons-10.svg" class="w-75" id="img-dayOn" alt="">
+                                    </div>
+                                    <div class="col-12 pb-2">
+                                        <p class="lead text-center" id="text-weather"></p>
+                                    </div>
+                                    <div class="col-4 p-0 m-0 text-center"><picture><img src="assets/imgs/icon-umberella.png" alt="" >
+                                        <span id="wind-Dayon"></span>
+                                    </picture>
+                                    </div>
+                                    <div class="col-4 p-0 m-0 text-center">
+                                        <picture><img src="assets/imgs/icon-wind.png" alt="" >
+                                            <span id="wind-speed"></span>
+                                    </div>
+                                    <div class="col-4 p-0 m-0 text-center">
+                                        <picture><img src="assets/imgs/icon-compass.png" alt="" >
+                                            <span id="wind-dir"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!-- ======= Services Section ======= -->
+<section class="display-other-days mt-5 pt-5">
+    <div class="container table-responsive">
+        <table class="table table-dark table-striped text-center">
+            <thead>
+                <th>Day</th>
+                <th>Max Temp</th>
+                <th>Min Temp</th>
+                <th>Condition</th>
+                <th>Status</th>
+                <th>Sun Rise</th>
+                <th>Sun Set</th>
+            </thead>
+            <tbody id="table-weather">
+
+            </tbody>
+        </table>
+    </div>
+</section>
+<footer class="mt-5 text-center bg-body-denger">
+        <div class="container pt-4">
+        <section class="mb-4">
+            <a
+            data-mdb-ripple-init target="_blank"
+            class="btn btn-link btn-floating btn-lg text-body m-1"
+            href="https://www.facebook.com/Artist1x"
+            role="button"
+            data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+            <a
+            data-mdb-ripple-init target="_blank"
+            class="btn btn-link btn-floating btn-lg text-body m-1"
+            href="https://twitter.com/artist1xx"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-twitter"></i></a>
+            <a
+            data-mdb-ripple-init target="_blank"
+            class="btn btn-link btn-floating btn-lg text-body m-1"
+            href="https://www.youtube.com/@wexfi-eg"
+            role="button"
+            data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+            <a
+            data-mdb-ripple-init target="_blank"
+            class="btn btn-link btn-floating btn-lg text-body m-1"
+            href="https://www.instagram.com/__abdelrahman.salah__/"
+            role="button"
+            data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+            <a
+            data-mdb-ripple-init target="_blank"
+            class="btn btn-link btn-floating btn-lg text-body m-1"
+            href="https://www.linkedin.com/in/a-salah-dev/"
+            role="button"
+            data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+            <a data-mdb-ripple-init target="_blank"
+            class="btn btn-link btn-floating btn-lg text-body m-1"
+            href="https://github.com/artist1x" 
+            role="button"
+            data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+        </section>
+        </div>
+        <div class="copyright-box">
+            <p class="copyright">© Copyright <strong>Weather</strong>. All Rights Reserved</p>
+        <div class="credits pb-3">
+            Designed by <a target="_blank" href="https://www.linkedin.com/in/abdelrahman-wexfi">Abdelrahman Salah</a>
+        </div>
+</footer>
+<!-- scripts -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
